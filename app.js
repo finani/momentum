@@ -52,3 +52,33 @@ const toBuy = ["potato", "tomato", "pizza"];
 toBuy.push("kimbab");
 console.log(toBuy);
 console.log(toBuy[999]);
+
+const playerName = "nico";
+const playerPoints = 1212;
+const playerHandsome = true;
+const playerFat = "little bit";
+
+// player[0] == name
+// player[1] == points
+// player[2] == handsome
+// player[3] == fat
+const playerArray = ["nico", 1212, true, "little bit"];
+
+const player = {
+  name: "nico",
+  points: 1212,
+  handsome: true,
+  fat: "little bit",
+};
+
+console.log(player);
+console.log(player.name);
+console.log(player["name"]);
+
+player.handsome = false;
+console.log(player);
+
+// player = false; // error
+player.points = player.points + 15;
+player.lastName = "potato";
+console.log(player);
