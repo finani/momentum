@@ -69,6 +69,9 @@ const player = {
   points: 1212,
   handsome: true,
   fat: "little bit",
+  sayHello: function (otherPersonsName) {
+    console.log("Hello " + otherPersonsName + " nice to meet you!");
+  }
 };
 
 console.log(player);
@@ -82,3 +85,29 @@ console.log(player);
 player.points = player.points + 15;
 player.lastName = "potato";
 console.log(player);
+
+function sayHello(nameOfPerson, age) {
+  console.log("Hello my name is " + nameOfPerson + " and I'm " + age);
+}
+
+sayHello("nico", 10);
+sayHello("dal", 23);
+sayHello("lynn", 21);
+
+function plus(firstNumber, secondNumber) {
+  console.log(firstNumber + secondNumber);
+}
+// console.log(firstNumber); // error
+
+plus();
+plus(8, 60);
+
+function divide(a, b) {
+  console.log(a / b);
+}
+
+divide(98, 20);
+
+console.log(player.name);
+player.sayHello("lynn");
+player.sayHello("nico");
