@@ -12,3 +12,11 @@ console.log("hello " + myName);
 myName = "nicolas";
 
 console.log("your new name is " + myName);
+
+const flag = true;
+console.log(flag);
+
+const amIFat = null;
+let something;
+console.log(amIFat);
+console.log(something);
