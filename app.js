@@ -156,3 +156,10 @@ function calculateKrAge(ageOfForeigner) {
 
 const krAge = calculateKrAge(age);
 console.log(krAge);
+
+const age2 = prompt("How old are you?");
+// const age2 = parseInt(prompt("How old are you?"));
+console.log(age2, parseInt(age2));
+console.log(typeof age2, typeof parseInt(age2)); // always string
+
+console.log(typeof "15", typeof parseInt("15"));
