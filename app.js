@@ -35,3 +35,15 @@ function handleH3sClick(event) {
   console.log(event.target.innerText);
 }
 h3s.addEventListener("click", handleH3sClick);
+
+function handleMouseEnter() {
+  h3s.innerText = "Mouse is here!";
+  h3s.style.color = "green";
+}
+h3s.addEventListener("mouseenter", handleMouseEnter);
+
+function handleMouseLeave() {
+  h3s.innerText = "Mouse is gone!";
+  h3s.style.color = "red";
+}
+h3s.addEventListener("mouseleave", handleMouseLeave);
