@@ -17,8 +17,21 @@ console.log(hellos);
 const h1s = document.getElementsByTagName("h1");
 console.log(h1s);
 
-const h3s = document.querySelector(".hello h3");
+const h3s = document.querySelector("div.hello h3:first-child");
 console.log(h3s);
 
 const h3sAll = document.querySelectorAll(".hello h3");
 console.log(h3sAll);
+
+h3s.innerHTML = "Hello";
+h3s.style.color = "red";
+
+function handleH3sClick(event) {
+  console.log("h3s was clicked!");
+  h3s.style.color = "blue";
+
+  console.log(event);
+  console.log(event.target);
+  console.log(event.target.innerText);
+}
+h3s.addEventListener("click", handleH3sClick);
