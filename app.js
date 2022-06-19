@@ -27,46 +27,36 @@ h3s.innerHTML = "Hello";
 h3s.style.color = "red";
 
 function handleH3sClick(event) {
-  console.log("h3s was clicked!");
-  h3s.style.color = "blue";
-
-  console.log(event);
-  console.log(event.target);
-  console.log(event.target.innerText);
+  const currentColor = h3s.style.color;
+  let newColor;
+  if (currentColor === "blue") {
+    newColor = "tomato";
+  } else {
+    newColor = "blue";
+  }
+  h3s.style.color = newColor;
 }
 h3s.addEventListener("click", handleH3sClick);
-// h3s.onclick = handleH3sClick;
 
-function handleMouseEnter() {
+h3s.addEventListener("mouseenter", () => {
   h3s.innerText = "Mouse is here!";
-  h3s.style.color = "green";
-}
-h3s.addEventListener("mouseenter", handleMouseEnter);
-// h3s.onmouseenter = handleMouseEnter;
+});
 
-function handleMouseLeave() {
+h3s.addEventListener("mouseleave", () => {
   h3s.innerText = "Mouse is gone!";
-  h3s.style.color = "red";
-}
-h3s.addEventListener("mouseleave", handleMouseLeave);
-// h3s.onmouseleave = handleMouseLeave;
+});
 
-function handleWindowResize() {
+window.addEventListener("resize", () => {
   document.body.style.backgroundColor = "tomato";
-}
-window.addEventListener("resize", handleWindowResize);
+});
 
-function handleWindowCopy() {
+window.addEventListener("copy", () => {
   alert("copier!");
-}
-window.addEventListener("copy", handleWindowCopy);
+});
 
-function handleWindowOffline() {
+window.addEventListener("offline", () => {
   alert("SOS on WIFI");
-}
-window.addEventListener("offline", handleWindowOffline);
-
-function handleWindowOnline() {
-  alert("All GOOOD");
-}
-window.addEventListener("online", handleWindowOnline);
+});
+window.addEventListener("online", () => {
+  alert("All GOOOD")
+});
