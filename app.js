@@ -64,11 +64,12 @@ window.addEventListener("online", () => {
 const h1ss = document.querySelector("h4");
 
 function handleH1ssClick(event) {
-  const clickedClass = "clicked";
-  if (h1ss.className === clickedClass) {
-    h1ss.className = "";
-  } else {
-    h1ss.className = clickedClass;
-  }
+  // const clickedClass = "clicked";
+  // if (h1ss.classList.contains(clickedClass)) {
+  //   h1ss.classList.remove(clickedClass);
+  // } else {
+  //   h1ss.classList.add(clickedClass);
+  // }
+  h1ss.classList.toggle("clicked");
 }
 h1ss.addEventListener("click", handleH1ssClick);
