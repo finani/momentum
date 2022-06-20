@@ -25,7 +25,3 @@ if (savedUsername === null) {
 } else {
   paintGreetings();
 }
-
-link.addEventListener("click", (event) => {
-  event.preventDefault();
-});
